@@ -1,0 +1,507 @@
+==========
+References
+==========
+BeanTrader
+System.ServiceModel
+BeanTrader.Models
+System
+System.Runtime.Serialization
+System.Linq
+BeanTraderServer
+System.Security.Cryptography
+Serilog
+System.Collections.Concurrent
+System.Collections.Generic
+
+System.Threading
+System.Text
+System.IO
+System.Reflection
+System.ServiceModel.Security
+System.ServiceModel.Description
+System.Security.Cryptography.X509Certificates
+System.ServiceModel.Channels
+BeanTraderClient
+BeanTraderClient.DependencyInjection
+BeanTraderClient.Views
+<global namespace>
+BeanTraderClient.Controls
+BeanTraderClient.ViewModels
+BeanTraderClient.Resources
+BeanTraderClient.Converters
+BeanTraderClient.Services
+BeanTraderClient.DesignTimeData
+BeanTraderClient.Properties
+XamlGeneratedNamespace
+project.all
+
+===============
+DownloadedFiles
+===============
+project.all.json
+
+==============
+ProjectResults
+==============
+----------------------
+Showing results for: D:\temp\windows-desktop\Samples\BeanTrader\NetFx\BeanTraderServer\BeanTraderServer.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net5.0
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+---------------------------
+Executed Actions for file: Project
+---------------------------
+
+Action Type: Project
+Action Name: ArchiveFiles
+Action Value: BundleConfig.cs,FilterConfig.cs,RouteConfig.cs,WebApiConfig.cs,global.asax.cs,global.asax,AssemblyInfo.cs,packages.config
+Times Run: 1
+Invalid Executions: 0
+
+Action Type: ProjectFile
+Action Name: MigrateProjectFile
+Action Value: 
+Times Run: 1
+Invalid Executions: 0
+
+
+----------------------
+Showing results for: D:\temp\windows-desktop\Samples\BeanTrader\NetFx\BeanTraderInterfaces\BeanTraderCommon.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net5.0
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+---------------------------
+Executed Actions for file: Project
+---------------------------
+
+Action Type: Project
+Action Name: ArchiveFiles
+Action Value: BundleConfig.cs,FilterConfig.cs,RouteConfig.cs,WebApiConfig.cs,global.asax.cs,global.asax,AssemblyInfo.cs,packages.config
+Times Run: 1
+Invalid Executions: 0
+
+Action Type: ProjectFile
+Action Name: MigrateProjectFile
+Action Value: 
+Times Run: 1
+Invalid Executions: 0
+
+
+----------------------
+Showing results for: D:\temp\windows-desktop\Samples\BeanTrader\NetFx\BeanTraderClient\BeanTraderClient.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net5.0
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+---------------------------
+Executed Actions for file: Project
+---------------------------
+
+Action Type: Project
+Action Name: ArchiveFiles
+Action Value: BundleConfig.cs,FilterConfig.cs,RouteConfig.cs,WebApiConfig.cs,global.asax.cs,global.asax,AssemblyInfo.cs,packages.config
+Times Run: 1
+Invalid Executions: 0
+
+Action Type: ProjectFile
+Action Name: MigrateProjectFile
+Action Value: 
+Times Run: 1
+Invalid Executions: 0
+
+
+
+===========
+BuildErrors
+===========
+------------------
+BUILD ERRORS FOR: D:\temp\windows-desktop\Samples\BeanTrader\NetFx\BeanTraderInterfaces\BeanTraderCommon.csproj
+------------------
+
+BuildError: CS0246: The type or namespace name 'ServiceContractAttribute' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'ServiceContract' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'Name' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'CallbackContract' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'SessionMode' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0103: The name 'SessionMode' does not exist in the current context
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'OperationContractAttribute' could not be found (are you missing a using directive or an assembly reference?)
+Count: 12
+
+BuildError: CS0246: The type or namespace name 'OperationContract' could not be found (are you missing a using directive or an assembly reference?)
+Count: 12
+
+BuildError: CS0246: The type or namespace name 'IsOneWay' could not be found (are you missing a using directive or an assembly reference?)
+Count: 6
+
+
+------------------
+BUILD ERRORS FOR: D:\temp\windows-desktop\Samples\BeanTrader\NetFx\BeanTraderServer\BeanTraderServer.csproj
+------------------
+
+BuildError: CS0246: The type or namespace name 'Serilog' could not be found (are you missing a using directive or an assembly reference?)
+Count: 2
+
+BuildError: CS0234: The type or namespace name 'Security' does not exist in the namespace 'System.ServiceModel' (are you missing an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'ServiceBehaviorAttribute' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'ServiceBehavior' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'InstanceContextMode' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0103: The name 'InstanceContextMode' does not exist in the current context
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'ConcurrencyMode' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0103: The name 'ConcurrencyMode' does not exist in the current context
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'OperationContext' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0103: The name 'OperationContext' does not exist in the current context
+Count: 9
+
+BuildError: CS0103: The name 'Log' does not exist in the current context
+Count: 31
+
+BuildError: CS0246: The type or namespace name 'ServiceHost' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0103: The name 'X509CertificateValidationMode' does not exist in the current context
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'CommunicationException' could not be found (are you missing a using directive or an assembly reference?)
+Count: 3
+
+BuildError: CS0246: The type or namespace name 'LoggerConfiguration' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+
+------------------
+BUILD ERRORS FOR: D:\temp\windows-desktop\Samples\BeanTrader\NetFx\BeanTraderClient\BeanTraderClient.csproj
+------------------
+
+BuildError: CS0246: The type or namespace name 'MahApps' could not be found (are you missing a using directive or an assembly reference?)
+Count: 5
+
+BuildError: CS0234: The type or namespace name 'Controls' does not exist in the namespace 'System.Windows' (are you missing an assembly reference?)
+Count: 5
+
+BuildError: CS0234: The type or namespace name 'Data' does not exist in the namespace 'System.Windows' (are you missing an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'Castle' could not be found (are you missing a using directive or an assembly reference?)
+Count: 11
+
+BuildError: CS0234: The type or namespace name 'Media' does not exist in the namespace 'System.Windows' (are you missing an assembly reference?)
+Count: 3
+
+BuildError: CS0246: The type or namespace name 'Nito' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0234: The type or namespace name 'Security' does not exist in the namespace 'System.ServiceModel' (are you missing an assembly reference?)
+Count: 1
+
+BuildError: CS0234: The type or namespace name 'Navigation' does not exist in the namespace 'System.Windows' (are you missing an assembly reference?)
+Count: 2
+
+BuildError: CS0246: The type or namespace name 'Application' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'StartupEventArgs' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'UserControl' could not be found (are you missing a using directive or an assembly reference?)
+Count: 2
+
+BuildError: CS0246: The type or namespace name 'RoutedEventArgs' could not be found (are you missing a using directive or an assembly reference?)
+Count: 9
+
+BuildError: CS0234: The type or namespace name 'ServiceContractAttributeAttribute' does not exist in the namespace 'System.ServiceModel' (are you missing an assembly reference?)
+Count: 1
+
+BuildError: CS0234: The type or namespace name 'ServiceContractAttribute' does not exist in the namespace 'System.ServiceModel' (are you missing an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'ConfigurationName' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'CallbackContract' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'SessionMode' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0234: The type or namespace name 'SessionMode' does not exist in the namespace 'System.ServiceModel' (are you missing an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'MouseEventArgs' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0234: The type or namespace name 'IClientChannel' does not exist in the namespace 'System.ServiceModel' (are you missing an assembly reference?)
+Count: 1
+
+BuildError: CS0234: The type or namespace name 'DuplexClientBase<>' does not exist in the namespace 'System.ServiceModel' (are you missing an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'DependencyObject' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'DependencyPropertyChangedEventArgs' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0234: The type or namespace name 'OperationContractAttributeAttribute' does not exist in the namespace 'System.ServiceModel' (are you missing an assembly reference?)
+Count: 21
+
+BuildError: CS0234: The type or namespace name 'OperationContractAttribute' does not exist in the namespace 'System.ServiceModel' (are you missing an assembly reference?)
+Count: 21
+
+BuildError: CS0246: The type or namespace name 'Action' could not be found (are you missing a using directive or an assembly reference?)
+Count: 21
+
+BuildError: CS0246: The type or namespace name 'ReplyAction' could not be found (are you missing a using directive or an assembly reference?)
+Count: 12
+
+BuildError: CS0246: The type or namespace name 'IsOneWay' could not be found (are you missing a using directive or an assembly reference?)
+Count: 9
+
+BuildError: CS0246: The type or namespace name 'DependencyProperty' could not be found (are you missing a using directive or an assembly reference?)
+Count: 3
+
+BuildError: CS0246: The type or namespace name 'IValueConverter' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'IWindsorContainer' could not be found (are you missing a using directive or an assembly reference?)
+Count: 5
+
+BuildError: CS0246: The type or namespace name 'IWindsorInstaller' could not be found (are you missing a using directive or an assembly reference?)
+Count: 3
+
+BuildError: CS0246: The type or namespace name 'IConfigurationStore' could not be found (are you missing a using directive or an assembly reference?)
+Count: 3
+
+BuildError: CS0234: The type or namespace name 'InstanceContext' does not exist in the namespace 'System.ServiceModel' (are you missing an assembly reference?)
+Count: 5
+
+BuildError: CS1069: The type name 'ApplicationSettingsBase' could not be found in the namespace 'System.Configuration'. This type has been forwarded to assembly 'System.Configuration.ConfigurationManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' Consider adding a reference to that assembly.
+Count: 2
+
+BuildError: CS0234: The type or namespace name 'EndpointAddress' does not exist in the namespace 'System.ServiceModel' (are you missing an assembly reference?)
+Count: 2
+
+BuildError: CS0234: The type or namespace name 'Channels' does not exist in the namespace 'System.ServiceModel' (are you missing an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'MetroWindow' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'Page' could not be found (are you missing a using directive or an assembly reference?)
+Count: 3
+
+BuildError: CS0246: The type or namespace name 'IDialogCoordinator' could not be found (are you missing a using directive or an assembly reference?)
+Count: 5
+
+BuildError: CS0246: The type or namespace name 'AsyncLock' could not be found (are you missing a using directive or an assembly reference?)
+Count: 2
+
+BuildError: CS0246: The type or namespace name 'Brush' could not be found (are you missing a using directive or an assembly reference?)
+Count: 8
+
+BuildError: CS0535: 'TradingViewModel2' does not implement interface member 'INotifyPropertyChanged.PropertyChanged'
+Count: 1
+
+BuildError: CS0103: The name 'InitializeComponent' does not exist in the current context
+Count: 5
+
+BuildError: CS0103: The name 'NameTextBox' does not exist in the current context
+Count: 3
+
+BuildError: CS1729: 'DuplexClientBase<BeanTraderService>' does not contain a constructor that takes 1 arguments
+Count: 1
+
+BuildError: CS1729: 'DuplexClientBase<BeanTraderService>' does not contain a constructor that takes 2 arguments
+Count: 1
+
+BuildError: CS1729: 'DuplexClientBase<BeanTraderService>' does not contain a constructor that takes 3 arguments
+Count: 3
+
+BuildError: CS0103: The name 'MainFrame' does not exist in the current context
+Count: 1
+
+BuildError: CS1061: 'TradingPage' does not contain a definition for 'DataContext' and no accessible extension method 'DataContext' accepting a first argument of type 'TradingPage' could be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0103: The name 'ClearStatus' does not exist in the current context
+Count: 1
+
+BuildError: CS0103: The name 'DependencyProperty' does not exist in the current context
+Count: 3
+
+BuildError: CS0246: The type or namespace name 'PropertyMetadata' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'PropertyChangedCallback' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'SolidColorBrush' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0103: The name 'Color' does not exist in the current context
+Count: 1
+
+BuildError: CS0103: The name 'DataContext' does not exist in the current context
+Count: 1
+
+BuildError: CS0103: The name 'Application' does not exist in the current context
+Count: 11
+
+BuildError: CS0103: The name 'NavigationService' does not exist in the current context
+Count: 2
+
+BuildError: CS0246: The type or namespace name 'InstanceContext' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0103: The name 'ThemeManager' does not exist in the current context
+Count: 4
+
+BuildError: CS8130: Cannot infer the type of implicitly-typed deconstruction variable 'currentTheme'.
+Count: 1
+
+BuildError: CS8130: Cannot infer the type of implicitly-typed deconstruction variable '_'.
+Count: 1
+
+BuildError: CS8183: Cannot infer the type of implicitly-typed discard.
+Count: 1
+
+BuildError: CS0103: The name 'ConfigurationManager' does not exist in the current context
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'WindsorContainer' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0103: The name 'FromAssembly' does not exist in the current context
+Count: 1
+
+BuildError: CS0103: The name 'Classes' does not exist in the current context
+Count: 2
+
+BuildError: CS0246: The type or namespace name 'Window' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0103: The name 'Component' does not exist in the current context
+Count: 5
+
+BuildError: CS0103: The name 'DialogCoordinator' does not exist in the current context
+Count: 1
+
+BuildError: CS1061: 'BeanTraderServiceClient' does not contain a definition for 'State' and no accessible extension method 'State' accepting a first argument of type 'BeanTraderServiceClient' could be found (are you missing a using directive or an assembly reference?)
+Count: 4
+
+BuildError: CS0103: The name 'CommunicationState' does not exist in the current context
+Count: 4
+
+BuildError: CS1061: 'BeanTraderServiceClient' does not contain a definition for 'Open' and no accessible extension method 'Open' accepting a first argument of type 'BeanTraderServiceClient' could be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'EndpointNotFoundException' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0103: The name 'MessageBox' does not exist in the current context
+Count: 1
+
+BuildError: CS0103: The name 'StartButton' does not exist in the current context
+Count: 2
+
+BuildError: CS0246: The type or namespace name 'TextBox' could not be found (are you missing a using directive or an assembly reference?)
+Count: 2
+
+BuildError: CS0103: The name 'Registry' does not exist in the current context
+Count: 2
+
+BuildError: CS0103: The name 'Visibility' does not exist in the current context
+Count: 2
+
+BuildError: CS0103: The name 'GetValue' does not exist in the current context
+Count: 3
+
+BuildError: CS0103: The name 'SetValue' does not exist in the current context
+Count: 3
+
+BuildError: CS0103: The name 'LayoutRoot' does not exist in the current context
+Count: 1
+
+BuildError: CS0103: The name 'CompleteTradeButton' does not exist in the current context
+Count: 2
+
+BuildError: CS0246: The type or namespace name 'CommunicationException' could not be found (are you missing a using directive or an assembly reference?)
+Count: 3
+
+BuildError: CS1061: 'BeanTraderServiceClient' does not contain a definition for 'Abort' and no accessible extension method 'Abort' accepting a first argument of type 'BeanTraderServiceClient' could be found (are you missing a using directive or an assembly reference?)
+Count: 3
+
+BuildError: CS1061: 'BeanTraderServiceClient' does not contain a definition for 'ClientCredentials' and no accessible extension method 'ClientCredentials' accepting a first argument of type 'BeanTraderServiceClient' could be found (are you missing a using directive or an assembly reference?)
+Count: 2
+
+BuildError: CS0103: The name 'X509CertificateValidationMode' does not exist in the current context
+Count: 1
+
+BuildError: CS1061: 'BeanTraderServiceClient' does not contain a definition for 'Close' and no accessible extension method 'Close' accepting a first argument of type 'BeanTraderServiceClient' could be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'CustomDialog' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0103: The name 'HorizontalAlignment' does not exist in the current context
+Count: 1
+
+BuildError: CS0246: The type or namespace name 'Style' could not be found (are you missing a using directive or an assembly reference?)
+Count: 1
+
+BuildError: CS0117: 'NewTradeOfferControl' does not contain a definition for 'DataContext'
+Count: 1
+
+
+
+
