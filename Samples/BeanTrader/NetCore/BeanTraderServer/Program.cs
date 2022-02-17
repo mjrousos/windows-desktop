@@ -1,31 +1,48 @@
 ﻿using Serilog;
-using System;
-using System.IO;
 using System.Security.Cryptography.X509Certificates;
-using System.ServiceModel;
-using System.ServiceModel.Security;
+using CoreWCF.Security;
+using CoreWCF.Configuration;
 
 namespace BeanTraderServer
 {
     class Program
     {
-        static void Main()
+        async static Task Main(string[] args)
         {
             ConfigureLogging();
+            var builder = WebApplication.CreateBuilder(args);
 
-            using (var host = new ServiceHost(typeof(BeanTrader)))
+            // Set NetTcp port
+            builder.WebHost.UseNetTcp(8090);
+
+            builder.Services.AddServiceModelServices();
+            builder.Services.AddServiceModelConfigurationManagerFile("wcf.config");
+
+            var app = builder.Build();
+
+            app.UseServiceModel(ConfigureServiceModel);
+
+            await app.StartAsync();
+            Log.Information("Bean Trader Service listening");
+            WaitForExitSignal();
+            Log.Information("Shutting down...");
+            await app.StopAsync();
+
+            if (app == null)
             {
-                // For demo purposes, just load the key from disk so that no one needs to install an untrustworthy self-signed cert
-                // or load from KeyVault (which would complicate the sample)
-                var certPath = Path.Combine(Path.GetDirectoryName(typeof(Program).Assembly.Location), "BeanTrader.pfx");
-                host.Credentials.ServiceCertificate.Certificate = new X509Certificate2(certPath, "password");
-                host.Credentials.ClientCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.None;
-                host.Open();
-                Log.Information("Bean Trader Service listening");
-                WaitForExitSignal();
-                Log.Information("Shutting down...");
-                host.Close();
+
             }
+        }
+
+        private static void ConfigureServiceModel(IServiceBuilder serviceBuilder)
+        {
+            var certPath = Path.Combine(Path.GetDirectoryName(typeof(Program).Assembly.Location), "BeanTrader.pfx");
+
+            serviceBuilder.ConfigureServiceHostBase<BeanTrader>(beanTraderServiceHost =>
+            {
+                beanTraderServiceHost.Credentials.ServiceCertificate.Certificate = new X509Certificate2(certPath, "password");
+                beanTraderServiceHost.Credentials.ClientCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.None;
+            });
         }
 
         private static void WaitForExitSignal()

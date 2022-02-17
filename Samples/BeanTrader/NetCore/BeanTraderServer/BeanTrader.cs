@@ -1,14 +1,10 @@
 ﻿using BeanTrader;
 using BeanTrader.Models;
+using CoreWCF;
 using Serilog;
-using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
-using System.ServiceModel;
 using System.Text;
-using System.Threading;
 
 namespace BeanTraderServer
 {
@@ -168,7 +164,7 @@ namespace BeanTraderServer
             TradeOffers.AddOrUpdate(tradeOffer.Id, tradeOffer, (id, oldOffer) => tradeOffer);
             Log.Information("New trade offer ({TradeOfferId}) listed by {UserId}", tradeOffer.Id, seller.Id);
 
-            List<string> invalidCallbacks = new List<string>();
+            var invalidCallbacks = new List<string>();
             foreach (var callback in Callbacks)
             {
                 try
@@ -201,7 +197,7 @@ namespace BeanTraderServer
 
             if (TradeOffers.TryRemove(offerId, out TradeOffer tradeOffer))
             {
-                List<string> invalidCallbacks = new List<string>();
+                var invalidCallbacks = new List<string>();
                 foreach (var callback in Callbacks)
                 {
                     try
