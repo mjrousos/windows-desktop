@@ -1,7 +1,7 @@
-﻿using BeanTrader.Models;
+using BeanTrader.Models;
 using System;
 using System.Collections.Generic;
-using System.ServiceModel;
+using CoreWCF;
 
 namespace BeanTrader
 {

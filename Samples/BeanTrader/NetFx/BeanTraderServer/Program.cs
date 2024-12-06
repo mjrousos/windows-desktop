@@ -1,45 +1,34 @@
-﻿using Serilog;
-using System;
-using System.IO;
-using System.Security.Cryptography.X509Certificates;
-using System.ServiceModel;
-using System.ServiceModel.Security;
+
+using CoreWCF.Configuration;
+using System.Net;
+using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+
 
 namespace BeanTraderServer
 {
-    class Program
-    {
-        static void Main()
-        {
-            ConfigureLogging();
+	public class Program
+	{
+		public static void Main(string[] args)
+		{
+      //All Ports set are default.
+			IWebHost host = CreateWebHostBuilder(args).Build();
+      host.Run();
+		}
 
-            using (var host = new ServiceHost(typeof(BeanTrader)))
+    public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+      WebHost.CreateDefaultBuilder(args)
+				 .UseKestrel(options => { 
+        options.Listen(address: IPAddress.Loopback, 8888, listenOptions =>
+        {
+            listenOptions.UseHttps(httpsOptions =>
             {
-                // For demo purposes, just load the key from disk so that no one needs to install an untrustworthy self-signed cert
-                var certPath = Path.Combine(Path.GetDirectoryName(typeof(Program).Assembly.Location), "BeanTrader.pfx");
-                host.Credentials.ServiceCertificate.Certificate = new X509Certificate2(certPath, "password");
-                host.Credentials.ClientCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.None;
-                host.Open();
-                Log.Information("Bean Trader Service listening");
-                WaitForExitSignal();
-                Log.Information("Shutting down...");
-                host.Close();
-            }
-        }
-
-        private static void WaitForExitSignal()
-        {
-            Console.WriteLine("Press enter to exit");
-            Console.ReadLine();
-        }
-
-        private static void ConfigureLogging()
-        {
-            Log.Logger = new LoggerConfiguration()
-                .WriteTo.Console()
-                .CreateLogger();
-
-            Log.Information("Logging initialized");
-        }
-    }
+#if NET472
+                httpsOptions.SslProtocols = SslProtocols.Tls12 | SslProtocols.Tls11 | SslProtocols.Tls;
+#endif // NET472
+            });
+        });})
+.UseNetTcp(8000)				 .UseStartup<Startup>();
+	}
 }

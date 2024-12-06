@@ -1,6 +1,6 @@
-﻿using BeanTrader.Models;
+using BeanTrader.Models;
 using System;
-using System.ServiceModel;
+using CoreWCF;
 
 namespace BeanTrader
 {
