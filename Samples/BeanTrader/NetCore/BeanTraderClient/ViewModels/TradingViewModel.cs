@@ -49,7 +49,7 @@ namespace BeanTraderClient.ViewModels
             TradingService.Connected += LoadDataAsync;
 
             // Get initial trader info and trade offers
-            await LoadDataAsync().ConfigureAwait(false);
+            await LoadDataAsync().ConfigureAwait(true);
 
             // Register for service callbacks
             CallbackHandler.AddNewTradeOfferHandler += AddTradeOffer;
@@ -60,8 +60,8 @@ namespace BeanTraderClient.ViewModels
         public async Task UnloadAsync()
         {
             // Stop listening
-            await TradingService.StopListeningAsync().ConfigureAwait(false);
-            await TradingService.LogoutAsync().ConfigureAwait(false);
+            await TradingService.StopListeningAsync().ConfigureAwait(true);
+            await TradingService.LogoutAsync().ConfigureAwait(true);
 
             // Unregister for service callbacks
             CallbackHandler.AddNewTradeOfferHandler -= AddTradeOffer;
@@ -111,7 +111,7 @@ namespace BeanTraderClient.ViewModels
 
             if (!traderNames.TryGetValue(sellerId, out string traderName))
             {
-                var names = await TradingService.GetTraderNamesAsync(new Guid[] { sellerId }).ConfigureAwait(false);
+                var names = await TradingService.GetTraderNamesAsync(new Guid[] { sellerId }).ConfigureAwait(true);
 
                 traderName = names.ContainsKey(sellerId) ?
                     traderNames.AddOrUpdate(sellerId, names[sellerId], (g, s) => names[sellerId]) :
@@ -170,14 +170,14 @@ namespace BeanTraderClient.ViewModels
 
         private async Task UpdateTraderInfoAsync()
         {
-            CurrentTrader = await TradingService.GetCurrentTraderInfoAsync().ConfigureAwait(false);
+            CurrentTrader = await TradingService.GetCurrentTraderInfoAsync().ConfigureAwait(true);
         }
 
         private async Task LoadDataAsync()
         {
-            await LoginAsync().ConfigureAwait(false);
-            await UpdateTraderInfoAsync().ConfigureAwait(false);
-            await ListenForTradeOffersAsync().ConfigureAwait(false);
+            await LoginAsync().ConfigureAwait(true);
+            await UpdateTraderInfoAsync().ConfigureAwait(true);
+            await ListenForTradeOffersAsync().ConfigureAwait(true);
         }
 
         private Task LoginAsync()
@@ -219,8 +219,8 @@ namespace BeanTraderClient.ViewModels
         {
             if (offer.SellerId == CurrentTrader.Id)
             {
-                SetStatus($"Trade ({offer}) accepted by {await GetTraderNameAsync(buyerId).ConfigureAwait(false) ?? buyerId.ToString()}");
-                await UpdateTraderInfoAsync().ConfigureAwait(false);
+                SetStatus($"Trade ({offer}) accepted by {await GetTraderNameAsync(buyerId).ConfigureAwait(true) ?? buyerId.ToString()}");
+                await UpdateTraderInfoAsync().ConfigureAwait(true);
             }
         }
 
@@ -228,13 +228,13 @@ namespace BeanTraderClient.ViewModels
         {
             var ownTrade = tradeOffer.SellerId == CurrentTrader.Id;
             var success = ownTrade ?
-                await TradingService.CancelTradeOfferAsync(tradeOffer.Id).ConfigureAwait(false) :
-                await TradingService.AcceptTradeAsync(tradeOffer.Id).ConfigureAwait(false);
+                await TradingService.CancelTradeOfferAsync(tradeOffer.Id).ConfigureAwait(true) :
+                await TradingService.AcceptTradeAsync(tradeOffer.Id).ConfigureAwait(true);
 
             if (success)
             {
                 SetStatus($"{(ownTrade ? "Canceled" : "Accepted")} trade ({tradeOffer})");
-                await UpdateTraderInfoAsync().ConfigureAwait(false);
+                await UpdateTraderInfoAsync().ConfigureAwait(true);
             }
             else
             {
@@ -261,12 +261,12 @@ namespace BeanTraderClient.ViewModels
                 DataContext = newTradeOfferViewModel
             };
 
-            await DialogCoordinator.ShowMetroDialogAsync(this, newTradeDialog).ConfigureAwait(false);
+            await DialogCoordinator.ShowMetroDialogAsync(this, newTradeDialog).ConfigureAwait(true);
         }
 
         private async Task CreateTradeOfferAsync(TradeOffer tradeOffer)
         {
-            if (await TradingService.OfferTradeAsync(tradeOffer).ConfigureAwait(false) != Guid.Empty)
+            if (await TradingService.OfferTradeAsync(tradeOffer).ConfigureAwait(true) != Guid.Empty)
             {
                 SetStatus("New trade offer created");
             }
@@ -275,7 +275,7 @@ namespace BeanTraderClient.ViewModels
                 SetStatus("ERROR: Trade offer could not be created. Do you have enough beans?", Application.Current.FindResource("ErrorBrush") as Brush);
             }
 
-            await UpdateTraderInfoAsync().ConfigureAwait(false);
+            await UpdateTraderInfoAsync().ConfigureAwait(true);
         }
 
         private void SetStatus(string message) => SetStatus(message, Application.Current.FindResource("IdealForegroundColorBrush") as Brush);

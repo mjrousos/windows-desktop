@@ -3,11 +3,13 @@ using BeanTrader.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BeanTraderClient
 {
+    [CallbackBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, UseSynchronizationContext = false)]
     public class BeanTraderCallback : BeanTraderServiceCallback
     {
         public event Action<TradeOffer> AddNewTradeOfferHandler;
