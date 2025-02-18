@@ -1,12 +1,9 @@
-﻿using BeanTrader;
-using CoreWCF;
-using CoreWCF.Configuration;
+﻿using CoreWCF.Configuration;
 using CoreWCF.Description;
 using CoreWCF.Security;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.IdentityModel.Protocols.WsTrust;
 using Serilog;
 using System;
 using System.IO;

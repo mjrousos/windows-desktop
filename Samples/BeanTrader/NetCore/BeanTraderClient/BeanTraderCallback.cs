@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 
 namespace BeanTraderClient
 {
-    [CallbackBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, UseSynchronizationContext = false)]
     public class BeanTraderCallback : BeanTraderServiceCallback
     {
         public event Action<TradeOffer> AddNewTradeOfferHandler;
