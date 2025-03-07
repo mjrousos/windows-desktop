@@ -21,5 +21,6 @@ packages/
 
 # User-specific files
 .vs/
+.vscode/
 *.suo
 *.user
